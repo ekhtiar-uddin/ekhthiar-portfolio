@@ -38,7 +38,8 @@ const MySkills = () => {
   const isAboveLarge = useMediaQuery("(min-width: 1500px)");
   // const isAboveSmall = useMediaQuery("(min-width: px)");
   return (
-    <section id="skills" className="pt-10 pb-24">
+    // pt-10 pb-24
+    <section id="skills" className="">
       {/* HEADER AND IMAGE SECTION */}
       <div className="md:flex md:justify-between md:gap-16  ">
         <motion.div
@@ -56,7 +57,7 @@ const MySkills = () => {
             MY <span className="">SKILLS</span>
           </p>
           <LineGradient width="w-1/3" />
-          <p className="mt-10 mb-7">
+          <p className="mt-4 ">
             These are the key technologies and tools I specialize in as a web
             developer.
           </p>
@@ -360,7 +361,7 @@ const MySkills = () => {
           </motion.div>
         </div> */}
 
-        <div className=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-24">
+        <div className=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-16 sm:mt-24">
           {skills.map((skill, index) => (
             <motion.div
               key={skill.name}

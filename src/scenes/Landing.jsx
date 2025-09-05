@@ -9,7 +9,7 @@ import useMediaQuery from "../hooks/useMediaQuery";
 const Landing = ({ setSelectedPage }) => {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
   return (
-    <div className="bsdg-[#fff6eb]   h-[90vh]   lg:flex-none  flex justify-center  items-center py-10">
+    <div className=" 3xs:h-[115vh] 2xs:h-[100vh] xs:h-[90vh]   lg:flex-none  flex justify-center  items-center py-10">
       <section id="home" className=" flex   justify-center    ">
         {/* basis-2/5 */}
         {/* MAIN TEXT  */}
@@ -17,7 +17,7 @@ const Landing = ({ setSelectedPage }) => {
           <div className="mb-3 ">
             <img
               src={profile}
-              className="w-[200px] h-[200px] mx-auto rounded-full"
+              className="select-none pointer-events-none w-[200px] h-[200px] mx-auto rounded-full"
             ></img>
           </div>
           <div className="  z-30 flex flex-col justify-center ">
@@ -35,7 +35,7 @@ const Landing = ({ setSelectedPage }) => {
               <p className="text-xl  text-center  mt-5">
                 Hello, I
                 <span style={{ fontFamily: "Arial, sans-serif" }}>'</span>m
-                M.Ekhthiar Uddin
+                Muhammad Ekhthiar Uddin
               </p>{" "}
               <p className="text-3xl mt-2 text-center font-medium">
                 Mern Stack Developer
@@ -86,26 +86,17 @@ const Landing = ({ setSelectedPage }) => {
                 visible: { opacity: 1, x: 0 },
               }}
             >
-              {/* <Link
-                className=" flex items-center gap-3 text-white bg-black rounded-full  py-3.5 px-9 font-medium
-               transition duration-500"
-                onClick={() => setSelectedPage("contact")}
-                to="https://drive.google.com/file/d/1MTaWomKhN1dYTh-2kUlUy3HafAkIV5pq/view?usp=sharing"
-              >
-                Resume <Download />
-              </Link> */}
-
               <Link
                 className="group flex items-center gap-3 
     text-white bg-black hover:bg-gray-800
-    rounded-full py-3.5 px-9 font-medium
+    rounded-full 3xs:py-2 3xs:px-6 2xs:py-3.5 2xs:px-9 font-medium
     transition-all duration-500 ease-out
     transform hover:scale-105 hover:-translate-y-0.5
     shadow-lg hover:shadow-2xl
     border border-gray-700 hover:border-gray-600
     backdrop-blur-sm"
                 onClick={() => setSelectedPage("contact")}
-                to="https://drive.google.com/file/d/1MTaWomKhN1dYTh-2kUlUy3HafAkIV5pq/view?usp=sharing"
+                to="https://drive.google.com/file/d/1bYKNCHESzJU2SvDaral2CEd1ldMguaDs/view?usp=sharing"
               >
                 <span className="transition-all duration-300 group-hover:tracking-wider">
                   Resume
@@ -115,17 +106,6 @@ const Landing = ({ setSelectedPage }) => {
     group-hover:translate-y-0.5 group-hover:scale-110"
                 />
               </Link>
-
-              {/* <AnchorLink
-                className=" py-3.5 hover:text-white
-             hover:bg-p1   bg-white
-              rounded-full  font-medium  transition duration-500  
-              flex items-center justify-center px-9 "
-                onClick={() => setSelectedPage("contact")}
-                href="#contact"
-              >
-                Let's talk. <FaArrowRight className="ml-2" />
-              </AnchorLink> */}
 
               <AnchorLink
                 className=" group py-3.5 px-9 
@@ -150,20 +130,6 @@ const Landing = ({ setSelectedPage }) => {
                 />
               </AnchorLink>
             </motion.div>
-
-            {/* <motion.div
-              className="flex  justify-center "
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ delay: 0.4, duration: 0.5 }}
-              variants={{
-                hidden: { opacity: 0, x: -50 },
-                visible: { opacity: 1, x: 0 },
-              }}
-            >
-              <SocialMediaIcons section="landing" />
-            </motion.div> */}
           </div>
         </div>
       </section>

@@ -45,8 +45,8 @@ const FuturePlanQuestion = ({ projectTitle, futurePlans }) => {
   };
 
   return (
-    <div className="mb-20">
-      <h1 className="text-3xl  my-8 text-center font-semibold text-primary-800">
+    <div className="mb-20 mt-12 ">
+      <h1 className="text-3xl text-d2 font-semibold text-primary-800">
         Future Plan of {projectTitle}
       </h1>
 
@@ -55,13 +55,13 @@ const FuturePlanQuestion = ({ projectTitle, futurePlans }) => {
           <div
             onClick={() => handleVisibility(item?.id)}
             key={item?.id}
-            className="border-b border-orange-200 hover:border-orange-300 transition-colors duration-200"
+            className="border-b border-b3"
           >
             <div className="cursor-pointer flex justify-between items-center py-2">
               <h1 className="pb-5 mt-4 font-bold text-xl text-black font-Ovo">
                 {item?.question}
               </h1>
-              <div className="text-p1 hover:scale-110 transition-transform duration-200">
+              <div className="text-d2 hover:scale-110 transition-transform duration-200">
                 {item?.id === currentId ? (
                   <Minus className="w-5 h-5" />
                 ) : (
@@ -76,7 +76,7 @@ const FuturePlanQuestion = ({ projectTitle, futurePlans }) => {
               }`}
             >
               <div className="overflow-hidden">
-                <p className="text-gray-700 text-left pb-5 font-Poppins leading-relaxed">
+                <p className="text-d2 text-left pb-5 font-Poppins leading-relaxed">
                   {item?.answer}
                 </p>
               </div>

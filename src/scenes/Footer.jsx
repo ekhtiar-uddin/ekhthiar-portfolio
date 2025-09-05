@@ -9,9 +9,9 @@ const Footer = () => {
   return (
     <footer
       className="h-[450px] flex
-     items-center md:h-[320px] text-white bg-[#101010]  "
+     items-center md:h-[320px] text-white bg-gray-900  "
     >
-      <div className="w-10/12 mx-auto ">
+      <div className="customWidth ">
         {/* <SocialMediaIcons section="footer" /> */}
 
         <div className="flex justify-center  md:justify-start my-10 gap-7">

@@ -30,7 +30,7 @@ const ProjectDetail = () => {
     challenges,
     technologies,
   } = clickedProject;
-  // w-[70%] mx-auto my-24
+
   return (
     <>
       <div className="">
@@ -48,7 +48,7 @@ const ProjectDetail = () => {
             </Link>
           </div>
 
-          <div className="bg-gradient-to-r from-p1 to-orange-600 text-white py-16">
+          <div className="bg-gradient-to-r from-p1 to-orange-600  py-16">
             <div className="max-w-4xl mx-auto px-8 text-center">
               <h1 className="text-4xl md:text-5xl font-bold mb-4 font-Ovo">
                 {clickedProject?.name} Details
@@ -102,7 +102,7 @@ const ProjectDetail = () => {
           </div>
         </section> */}
 
-        <section className="customWidth flex gap-8 mt-20">
+        <section className="customWidth flex lg:flex-row flex-col gap-8 mt-20">
           <div
             className="w-full bg-gradient-to-br from-orange-50/50 to-white border border-orange-200/30 
                   rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300"
@@ -112,7 +112,7 @@ const ProjectDetail = () => {
             </h1>
             <div className="space-y-4">
               {features?.map((item, index) => (
-                <div className="flex gap-3 items-start group">
+                <div className="flex  gap-3 items-start group">
                   <div
                     className="w-5 h-5 bg-p1 rounded-full flex items-center justify-center 
                         flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform duration-200"
@@ -172,7 +172,7 @@ const ProjectDetail = () => {
           </div>
         </section>
 
-        <section className=" w-[70%] mx-auto mt-16  mb-24 flex gap-10 justify-between">
+        <section className="customWidth mt-16  mb-24 flex gap-10 justify-between">
           <div className="w-full">
             <p className="text-gray-900 mb-10">
               {" "}
@@ -219,7 +219,7 @@ const ProjectDetail = () => {
             <FuturePlanQuestion futurePlans={futurePlans} projectTitle={name} />
           </div>
 
-          <div className="w-full lg:mb-24">
+          <div className="w-full lg:mb-24 md:block hidden">
             <div>
               {" "}
               <img className="w-full rounded-2xl" src={img1} alt="" />

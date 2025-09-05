@@ -40,8 +40,8 @@ const Contact = () => {
   };
   // bg-[#fff6eb]
   return (
-    <div className="mt-16 gradient-anim h-[130vh] md:h-[100vh] flex justify-center items-center">
-      <section id="contact" className="contact   w-[70%] mx-auto    ">
+    <div className=" mt-16 gradient-anim h-[130vh] md:h-[100vh] flex justify-center items-center">
+      <section id="contact" className="contact customWidth       ">
         {/* HEADINGS */}
         <motion.div
           initial="hidden"
@@ -162,7 +162,13 @@ const Contact = () => {
               </button>
             </form> */}
 
-            <form className="space-y-6">
+            <form
+              target="_blank"
+              onSubmit={onSubmit}
+              action="https://formsubmit.co/ba7de4a03eb62f2f1abef467fe34c333"
+              method="POST"
+              className="space-y-6"
+            >
               {/* Name Input */}
               <div className="group">
                 <input

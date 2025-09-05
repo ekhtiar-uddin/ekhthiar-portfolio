@@ -36,7 +36,7 @@ function App() {
           selectedPage={selectedPage}
           setSelectedPage={setSelectedPage}
         />
-        {/*  before <div className="w-5/6 mx-auto md:h-full"> */}
+
         <div className="md:h-full ">
           {isDesktop && (
             <DotGroup
@@ -47,7 +47,7 @@ function App() {
           <Landing setSelectedPage={setSelectedPage} />
         </div>
       </div>
-      <div className=" w-[70%] mx-auto  ">
+      <div className=" customWidth  ">
         <motion.div
           margin="0 0 -200px 0"
           amount="all"
@@ -56,7 +56,7 @@ function App() {
           <AboutMe />
         </motion.div>
       </div>
-      <div className="w-[70%] mx-auto   ">
+      <div className="customWidth   ">
         <motion.div
           margin="0 0 -200px 0"
           amount="all"
@@ -66,7 +66,7 @@ function App() {
         </motion.div>
       </div>
 
-      <div className="w-[70%] mx-auto ">
+      <div className="customWidth ">
         <motion.div
           margin="0 0 -200px 0"
           amount="all"

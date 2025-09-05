@@ -11,7 +11,7 @@ const Link = ({ page, isTopOfPage, selectedPage, setSelectedPage }) => {
       className={`${
         selectedPage === lowerCasePage
           ? "text-p1"
-          : "sm:text-[#192a32] text-white"
+          : "md:text-[#192a32] text-white"
       } hover:text-p1 transition duration-500`}
       href={`#${lowerCasePage}`}
       onClick={() => setSelectedPage(lowerCasePage)}
@@ -23,7 +23,7 @@ const Link = ({ page, isTopOfPage, selectedPage, setSelectedPage }) => {
 
 const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
-  const isAvobeSmallScreens = useMediaQuery("(min-width:780px)");
+  const isAvobeSmallScreens = useMediaQuery("(min-width:768px)");
   const navbarBackground = isTopOfPage
     ? ""
     : " fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b border-gray-200";
@@ -31,17 +31,20 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   return (
     // z-40 w-full fixed top-0 ${navbarBackground} border-b
     //  bg-white border-gray-300   py-6
-    <nav className={`${isTopOfPage ? "" : "bg-white"}   ${navbarBackground}`}>
-      <div className="flex items-center py-4 justify-between customWidth">
-        <h4 className="font-playfair  text-3xl font-bold">
-          <span className="text-p1">N</span>iloy
-          <span className="text-p1">.</span>
-        </h4>
+    <nav className={`${isTopOfPage ? "" : "bg-white"}  ${navbarBackground}`}>
+      <div className="flex  items-center py-4 justify-between  customWidth">
+        <div className=" ">
+          <h4 className="font-playfair  text-3xl font-bold">
+            <span className="text-p1">N</span>iloy
+            <span className="text-p1">.</span>
+          </h4>
+        </div>
 
-        <div>
+        <div className="md:block hidden">
           {/* dextop nav */}
+          {/* ml-16 */}
           {isAvobeSmallScreens ? (
-            <div className="bg-white ml-16  px-10 p-4 rounded-full flex justify-between gap-12 font-opensans text-sm font-semibold">
+            <div className="bg-white   px-10 p-4 rounded-full flex justify-between gap-12 lg:ml-16 font-opensans text-sm font-semibold">
               <Link
                 page="Home"
                 isTopOfPage={isTopOfPage}
@@ -81,86 +84,84 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
             </div>
           ) : (
             <button
-              className="rounded-full cursor-pointer bg-p1 p-2 transition-all duration-500 "
+              className="rounded-full    cursor-pointer bg-p1 p-2 transition-all duration-500 "
               onClick={() => setIsMenuToggled(!isMenuToggled)}
             >
               <img alt="menu-icon" src={menuIcon} />
             </button>
           )}
+        </div>
+        {isMenuToggled && (
+          <div
+            className="fixed inset-0 bg-[#000] opacity-60 z-40"
+            onClick={() => setIsMenuToggled(false)}
+          />
+        )}
+        {/* mobile menu popup */}
+        <div
+          className={`xl:hidden  bg-gray-950 transition-all duration-300 fixed top-0 right-0 h-full shadow-xl z-50  overflow-hidden w-80 ${
+            isMenuToggled
+              ? "translate-x-0 opacity-100"
+              : "translate-x-full opacity-0"
+          }`}
+        >
+          {/* close icon */}
+          <div className="flex justify-end p-12">
+            <button
+              className=" cursor-pointer bg-p1 hover:bg-p1/80 "
+              onClick={() => setIsMenuToggled(!isMenuToggled)}
+            >
+              <img
+                src="close-icon"
+                className="w-[35px] "
+                src={closeIcon}
+                alt=""
+              />
+            </button>
+          </div>
 
-          {/* mobile menu popup */}
-          {!isAvobeSmallScreens && isMenuToggled && (
-            <div className="fixed right-0 bottom-0  transition-all duration-500  h-full bg-black w-[300px]">
-              {/* close icon */}
-              <div className="flex justify-end p-12">
-                <button
-                  className=" cursor-pointer bg-p1 hover:bg-p1/80 "
-                  onClick={() => setIsMenuToggled(!isMenuToggled)}
-                >
-                  <img
-                    src="close-icon"
-                    className="w-[35px] "
-                    src={closeIcon}
-                    alt=""
-                  />
-                </button>
-              </div>
-
-              {/* menu items */}
-              <div className="flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue">
-                <Link
-                  page="Home"
-                  selectedPage={selectedPage}
-                  setSelectedPage={setSelectedPage}
-                />
-                <Link
-                  page="About"
-                  selectedPage={selectedPage}
-                  setSelectedPage={setSelectedPage}
-                />
-                <Link
-                  page="Skills"
-                  selectedPage={selectedPage}
-                  setSelectedPage={setSelectedPage}
-                />
-                <Link
-                  page="Projects"
-                  selectedPage={selectedPage}
-                  setSelectedPage={setSelectedPage}
-                />
-                {/* <Link
+          {/* menu items */}
+          <div className="flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue">
+            <Link
+              page="Home"
+              selectedPage={selectedPage}
+              setSelectedPage={setSelectedPage}
+            />
+            <Link
+              page="About"
+              selectedPage={selectedPage}
+              setSelectedPage={setSelectedPage}
+            />
+            <Link
+              page="Skills"
+              selectedPage={selectedPage}
+              setSelectedPage={setSelectedPage}
+            />
+            <Link
+              page="Projects"
+              selectedPage={selectedPage}
+              setSelectedPage={setSelectedPage}
+            />
+            {/* <Link
                 page="Testimonials"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               /> */}
-                <Link
-                  page="Contact"
-                  selectedPage={selectedPage}
-                  setSelectedPage={setSelectedPage}
-                />
-              </div>
-            </div>
-          )}
+            <Link
+              page="Contact"
+              selectedPage={selectedPage}
+              setSelectedPage={setSelectedPage}
+            />
+          </div>
         </div>
 
-        {/* <AnchorLink href="#contact" onClick={() => setSelectedPage("contact")}>
-          <div
-            className="py-3 cursor-pointer justify-center gap-4 border 
-      hover:bg-b1 border-[#A7A7A7] rounded-full font-semibold transition duration-500
-      w-[155px] flex items-center"
-          >
-            Contact
-            <MdOutlineArrowOutward />
-          </div>
-        </AnchorLink> */}
-
         <AnchorLink
-          className="hidden md:block"
+          className="md:hidden lg:block 3xs:mr-5 2xs:mr-10  "
           href="#contact"
           onClick={() => setSelectedPage("contact")}
         >
           <div
-            className="group py-3 px-4 cursor-pointer justify-center gap-3 
+            className=" group py-3 px-4 cursor-pointer justify-center gap-3 
     border border-gray-300 hover:border-p1/50
     bg-white/80 hover:bg-p1 
     text-gray-700 hover:text-white
@@ -180,6 +181,13 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
             />
           </div>
         </AnchorLink>
+
+        <button
+          className="rounded-full md:hidden block  cursor-pointer bg-p1 p-2 transition-all duration-500 "
+          onClick={() => setIsMenuToggled(!isMenuToggled)}
+        >
+          <img alt="menu-icon" src={menuIcon} />
+        </button>
       </div>
     </nav>
   );

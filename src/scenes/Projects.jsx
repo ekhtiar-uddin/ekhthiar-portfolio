@@ -33,7 +33,7 @@ const Project = ({ project }) => {
       <div className=" upcomingCard">
         <div className="">
           <img
-            className="h-[370px] w-full"
+            className=" w-full"
             src={`/images/${projectTitle}.png`}
             alt={projectTitle}
           />
@@ -84,7 +84,7 @@ const Projects = () => {
   console.log("here", projects);
 
   return (
-    <section id="projects" className="  pb-16 ">
+    <section id="projects" className="  pb-16 mt-16 sm:mt-32">
       {/* HEADINGS */}
       <motion.div
         className=" md:w-2/5 mx-auto text-center"
@@ -105,7 +105,7 @@ const Projects = () => {
             <LineGradient width="w-2/3" />
           </div>
         </div>
-        <p className="mt-10 mb-10">
+        <p className="mt-3 mb-12 sm:mb-16">
           Here are some of the real-world projects I’ve built during my learning
           journey
         </p>
@@ -115,7 +115,7 @@ const Projects = () => {
       <div className="">
         {projects.length > 0 && (
           <motion.div
-            className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-8 md:gap-10 "
+            className="grid lg:grid-cols-2 2lg:gap-x-70 lg:gap-x-62 xl:gap-x-8 2xl:grid-cols-4 xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-5 md:gap-6 "
             variants={container}
             initial="hidden"
             whileInView="visible"

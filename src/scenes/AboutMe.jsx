@@ -7,7 +7,7 @@ const AboutMe = () => {
   //   const isAboveLarge = useMediaQuery("(min-width: 1500px)");
   // const isAboveSmall = useMediaQuery("(min-width: px)");
   return (
-    <section id="about" className="mb-32 mt-20">
+    <section id="about" className="mb-24 md:mb-32 mt-20 ">
       <motion.div
         className="  text-center"
         initial="hidden"
@@ -28,8 +28,11 @@ const AboutMe = () => {
           </p>
         </div>
 
-        <div className="flex md:flex-row flex-col items-center gap-16 md:gap-24 ">
-          <div className="relative w-[400px] h-[400px] rounded-[10%] overflow-hidden">
+        <div
+          className="flex lg:flex-row flex-col 
+        items-center gap-16 lg:gap-16 xl:gap-24  "
+        >
+          <div className="relative xs:w-[400px] xs:h-[400px] w-[310px] h-[310px] rounded-[10%] overflow-hidden">
             <div className="bg-[url('./assets/about.jpg')] bg-cover w-full h-full"></div>
             <div className="absolute inset-0 bg-black/0 hover:bg-black/40 transition-all duration-500"></div>
           </div>
