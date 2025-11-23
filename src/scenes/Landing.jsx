@@ -35,7 +35,7 @@ const Landing = ({ setSelectedPage }) => {
               <p className="text-xl  text-center  mt-5">
                 Hello, I
                 <span style={{ fontFamily: "Arial, sans-serif" }}>'</span>m
-                Muhammad Ekhthiar Uddin
+                Muhammad Ekhtiar Uddin
               </p>{" "}
               <p className="text-3xl mt-2 text-center font-medium">
                 Mern Stack Developer

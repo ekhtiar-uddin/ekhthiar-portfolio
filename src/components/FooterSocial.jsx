@@ -23,7 +23,7 @@ const FooterSocialMediaIcons = ({ section }) => {
       </a>
       <a
         className=" hover:opacity-70 transition duration-500"
-        href="https://github.com/Niloy11111"
+        href="https://github.com/ekhtiar-uddin"
         target="_blank"
         rel="noreferrer"
       >

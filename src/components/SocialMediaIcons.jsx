@@ -68,7 +68,7 @@ const SocialMediaIcons = ({ section }) => {
         className="group w-12 h-12 bg-white rounded-full shadow-md hover:shadow-lg
           flex items-center justify-center transition-all duration-300 
           hover:scale-110 hover:-translate-y-1"
-        href="https://www.linkedin.com/in/ekhthiar-uddin/"
+        href="https://www.linkedin.com/in/muhammad-ekhthiar-uddin-softwaredeveloper/"
         target="_blank"
         rel="noreferrer"
       >
@@ -83,7 +83,7 @@ const SocialMediaIcons = ({ section }) => {
         className="group w-12 h-12 bg-white rounded-full shadow-md hover:shadow-lg
           flex items-center justify-center transition-all duration-300 
           hover:scale-110 hover:-translate-y-1"
-        href="https://github.com/Niloy11111"
+        href="https://github.com/ekhtiar-uddin"
         target="_blank"
         rel="noreferrer"
       >
